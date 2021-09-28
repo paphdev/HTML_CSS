@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* Variables */
+:root {
+    /* Colors */
+
+    /* Primary */
+    --darkCyan: hsl(185, 75%, 39%);
+    --veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+    --darkGrayishBlue: hsl(227, 10%, 46%);
+
+    /* Neutral */
+    --darkGray: hsl(0, 0%, 59%);
+
+    /* Typography */
+    --fontSizeNameStats: 18px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background: var(--darkCyan);
+    line-height: 1.7;
+    /* font-size: var(--fontSizeNameStats); */
+    font-size: calc(15px + (19.20 - 15) * ((100vw - 375px) / (2000 - 375)));
+    color: var(--veryDarkDesaturatedBlue);
+    overflow-x: hidden;
+    position: relative;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; */
+}
+
+.container {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    position: relative;
+}
+
+.wrapper {
+    display: grid;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {
+    margin: 0 auto;
+    max-width: 375px;
+    border-radius: 10px;
+}
+
+.bg-pattern {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-bottom: 0.15px solid hsl(0, 5%, 78%);
+    ;
+}
+
+.card-photo {
+    object-fit: cover;
+    width: 35%;
+    border-radius: 50%;
+    margin-top: -15%;
+    border: 5px solid #fff;
+    /* margin-bottom: 1.15rem; */
+}
+
+.card-title {
+    margin-top: 1.15rem;
+    margin-bottom: 1.15rem;
+}
+
+.lead {
+    font-weight: 700;
+}
+
+.age {
+    color: var(--darkGray);
+    font-weight: 400;
+    margin-left: 2px;
+}
+
+.city {
+    text-align: center;
+    font-size: calc(13px + (16 - 13) * ((100vw - 375px) / (2000 - 375)));
+    color: var(--darkGray);
+}
+
+.card-footer {
+    background: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 1.15rem 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.stats {
+    font-weight: 700;
+}
+
+.card-stats p:last-child {
+    letter-spacing: 2px;
+    color: var(--darkGray);
+    font-size: calc(10px + (14 - 10) * ((100vw - 375px) / (2000 - 375)));
+}

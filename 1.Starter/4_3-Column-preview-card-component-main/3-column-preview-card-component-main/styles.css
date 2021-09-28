@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* 
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+
+*/
+
+/* Variables */
+:root{
+                /* Colors */
+/* Primary */
+--brightOrange: hsl(31, 77%, 52%);
+--darkCyan: hsl(184, 100%, 22%);
+--veryDarkCyan: hsl(179, 100%, 13%);
+
+/* Neutral */
+--transparentWhite : hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+--veryLightGray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+--transit: all 0.3s linear;
+
+/* Fonts */
+--primaryFont: 'Lexend Deca', sans-serif;
+--secondaryFont: 'Big Shoulders Display', cursive; /*Headings*/
+}
+
+/* General */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: var(--veryLightGray);
+    font-size: 15px;
+    font-family: var(--primaryFont);
+    line-height: 1.7;
+}
+
+.container{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    min-height: 100vh;
+    display: flex;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.card{
+    padding: 2.5rem;
+    color: var(--veryLightGray);
+    max-width: 320px;
+}
+
+.card-title h1{
+    font-family: var(--secondaryFont);
+    font-size: 2.75rem;
+    text-transform: uppercase;
+    margin: 1.15rem 0;
+}
+
+.lead{
+    color: var(--transparentWhite);
+    opacity: 0.85;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.btn{
+    padding: 0.875rem 2rem;
+    border-radius: 50px;
+    border: 3px solid hsl(0, 0%, 95%);
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transit);
+    letter-spacing: 0.5px;
+}
+
+.btn-sedans{
+    color: var(--brightOrange);
+}
+
+.btn-suvs{
+    color: var(--darkCyan);
+}
+
+.btn-luxury{
+    color: var(--veryDarkCyan);
+}
+
+.btn:hover{
+    background: none;
+    color: var(--transparentWhite);
+}
+
+.card-sedans{
+    background: var(--brightOrange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-suvs{
+    background: var(--darkCyan);
+}
+
+.card-luxury{
+    background: var(--veryDarkCyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Desktop */
+@media screen and (min-width:1024px) {
+    .wrapper{
+        flex-direction: row;
+    }
+
+    .card{
+        max-width: 305px;
+    }
+
+    .card-sedans{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+}
+
+.card-luxury{
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+}

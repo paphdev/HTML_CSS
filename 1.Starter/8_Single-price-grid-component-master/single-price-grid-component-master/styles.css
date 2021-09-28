@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* Variables */
+:root {
+    /* Colors */
+    /* Primary */
+    --PrimaryCyan: hsl(179, 62%, 43%);
+    --primaryBrightYellow: hsl(71, 73%, 54%);
+
+    /* Neutral */
+    --lightGray: hsl(204, 43%, 93%);
+    --grayishBlue: hsl(218, 22%, 67%);
+}
+
+/* General Settings */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 0.875rem;
+    background: var(--lightGray);
+}
+
+.container {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 0.15rem;
+}
+
+/* Global Settings */
+h1 {
+    font-size: 1.75rem;
+}
+
+@media screen and (max-width:320px) {
+    h1 {
+        font-size: 1.33rem;
+    }
+}
+
+@media screen and (min-width:800px) {
+    body {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Card */
+.card{
+    box-shadow: 0 5px 15px 3px hsla(218, 22%, 67%, 0.35);
+}
+
+
+/* Header */
+.card-header {
+    background: hsl(0, 0%, 100%);
+    padding: 1.5rem;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-header .title {
+    color: var(--PrimaryCyan);
+}
+
+.txt-promo {
+    margin: 1.5rem auto;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--primaryBrightYellow);
+}
+
+.card-header .lead:last-child {
+    line-height: 1.75;
+    color: var(--grayishBlue);
+}
+
+/* Bottom */
+/* Left side */
+.left-side {
+    background: var(--PrimaryCyan);
+    padding: 1.5rem;
+    color: hsl(0, 0%, 100%);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subscription {
+    font-size: 1rem;
+    margin: 1.5rem 0;
+}
+
+.lead .price {
+    font-weight: 700;
+    font-size: 1.75rem;
+    margin-right: 5px;
+}
+
+.lead .light-lead {
+    color: hsla(204, 43%, 93%, 0.45);
+}
+
+.subscription .lead:first-child {
+    margin-bottom: 0.475rem;
+}
+
+.subscription .lead:last-child {
+    letter-spacing: 0.85px;
+    color: hsla(204, 43%, 93%, 0.90);
+}
+
+.btn {
+    display: inline-block;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    color: hsl(0, 0%, 100%);
+    background: var(--primaryBrightYellow);
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 0 20px 0px hsl(218, 22%, 67%);
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.btn:hover {
+    background: hsl(71, 61%, 52%);
+}
+
+/* Right Side */
+.right-side {
+    background: hsla(179, 62%, 43%, 0.85);
+    padding: 1.5rem;
+    color: hsl(204, 43%, 93%);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.875rem;
+
+}
+
+.right-side .title {
+    margin-bottom: 1.5rem;
+}
+
+.right-side .lead {
+    letter-spacing: 0.5px;
+    /* font-size: 1rem; */
+    color: hsla(204, 43%, 93%, 0.80);
+    line-height: 1.5;
+    max-width: 185px;
+}
+
+/* Large Screen */
+@media screen and (min-width:768px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-bottom{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .right-side .lead{
+        max-width: 200px;
+    }
+
+    .card-header .lead:last-child{
+        max-width: 540px;
+    }
+
+    .card-header .txt-promo{
+        margin: 0.75rem auto;
+    }
+
+    .right-side{
+        border-bottom-left-radius: 0;
+    }
+
+    .left-side{
+         border-bottom-left-radius: 5px;
+    }
+}

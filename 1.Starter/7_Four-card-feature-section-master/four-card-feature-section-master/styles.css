@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* Variables */
+:root {
+    /* Primary Colors */
+    --primaryRed: hsl(0, 78%, 62%);
+    --primaryCyan: hsl(180, 62%, 55%);
+    --primaryOrange: hsl(34, 97%, 64%);
+    --primaryBlue: hsl(212, 86%, 64%);
+
+    /* Neutral */
+    --veryDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: hsl(0, 0%, 98%);
+}
+
+/* General Settings */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--veryLightGray);
+    color: var(--veryDarkBlue);
+    font-size: calc(0.75rem + (4 - 0.75) * ((90vw - 375px) / (1750 - 375)));
+}
+
+.main {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 5rem;
+    max-width: 520px;
+}
+
+.titles {
+    margin-bottom: 1.25rem;
+}
+
+.light-title {
+    font-weight: 200;
+}
+
+.txt-intro {
+    font-size: calc(16px + (17 - 16) * ((90vw - 280px) / (1750 - 280)));
+    color: var(--grayishBlue);
+}
+
+/* Cards */
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.middle-cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.card {
+    display: grid;
+    font-size: 0.875rem;
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 20px 0px hsla(229, 6%, 66%, 0.45);
+    ;
+}
+
+.card-top {
+    border-top: 4px solid var(--primaryCyan);
+}
+
+.card-bottom {
+    border-top: 4px solid var(--primaryBlue);
+}
+
+.middle-cards-wrapper .card:first-child {
+    border-top: 4px solid var(--primaryRed);
+}
+
+.middle-cards-wrapper .card:last-child {
+    border-top: 4px solid var(--primaryOrange);
+}
+
+.card-txt {
+    font-size: 14px;
+    margin: 0.375rem auto 3rem auto;
+    line-height: 1.8;
+    color: var(--grayishBlue);
+}
+
+.card-img {
+    width: 90%;
+}
+
+.card-footer {
+    justify-self: end;
+}
+
+/* Large Screen */
+@media screen and (min-width:1024px) {
+    .card{
+        margin: auto;
+        padding: 1.65rem;
+    }
+    .cards-wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1.5rem;
+    }
+}
